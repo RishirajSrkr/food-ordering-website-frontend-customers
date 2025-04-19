@@ -98,10 +98,10 @@ function ExploreMenu({category, setCategory}) {
                     onClick={() => handleCategoryClick(item.id)}
                     className={`flex flex-col items-center justify-center cursor-pointer transition-all duration-300 py-2 px-1 ${activeCategory === item.id ? 'scale-105' : 'opacity-90 hover:opacity-100'}`}
                   >
-                    <div className={`w-24 h-24 sm:w-28 sm:h-28 rounded-full flex items-center justify-center p-1 mb-2 overflow-hidden bg-white shadow-sm ${activeCategory === item.id ? "border-2 border-green-500" : "border border-green-100"}`}>
+                    <div className={`w-24 h-24 sm:w-28 sm:h-28 rounded-full flex items-center justify-center  mb-2 overflow-hidden bg-white shadow-sm ${activeCategory === item.id ? "border-2 border-green-500" : "border border-green-100"}`}>
                       <img 
                         src={item.icon} 
-                        className={`object-contain transform transition-transform duration-500 hover:scale-110`} 
+                        className={`w-24 h-24 sm:w-28 sm:h-28 object-cover transform transition-transform duration-500 hover:scale-110`} 
                         alt={item.categoryName} 
                       />
                     </div>

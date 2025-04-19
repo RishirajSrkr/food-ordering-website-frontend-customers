@@ -1,12 +1,11 @@
-import Biryani from './Category-image-biryani.jpg'
-import Burger from './Category-image-burger.jpg'
-import Cakes from './Category-image-cake.jpg'
-import NorthIndianThali from './Category-image-north-indian-thali.jpg'
-import Pizza from './Category-image-pizza.jpg'
-import Paratha from './Category-image-paratha.jpg'
-import CholeBhature from './Category-image-chole-bhature.jpg'
-import Noodles from './Category-image-noodles.jpg'
-
+import Apples from './apples.png';
+import Berries from './Berries.png';
+import Citrus from './Citrus.png';
+import Grapes from './Grapes.png';
+import Exotic from './Exotic.png';
+import Melons from './Melons.png';
+import Tropical from './Tropical.png';
+import Stonefruits from './Stonefruits.png';
 
 
 
@@ -14,50 +13,50 @@ import Noodles from './Category-image-noodles.jpg'
 
 export const categories = [
     {
-        categoryName: "Biryani",
-        id: "biryani",
-        icon: Biryani
+        categoryName: "Apple",
+        id: "apples",
+        icon: Apples
     },
 
     {
-        categoryName: "Burger",
-        id: "burger",
-        icon: Burger
+        categoryName: "Berries",
+        id: "berries",
+        icon: Berries
     },
 
     {
-        categoryName: "Cakes",
-        id: "cakes",
-        icon: Cakes
+        categoryName: "Citrus",
+        id: "citrus",
+        icon: Citrus
     },
 
     {
-        categoryName: "North Indian Thali",
-        id: "north-indian-thali",
-        icon: NorthIndianThali
+        categoryName: "Grapes",
+        id: "grapes",
+        icon: Grapes
     },
 
     {
-        categoryName: "Pizza",
-        id: "pizza",
-        icon: Pizza
+        categoryName: "Exotic",
+        id: "exotic",
+        icon: Exotic
     },
 
     {
-        categoryName: "Paratha",
-        id: "paratha",
-        icon: Paratha
+        categoryName: "Melons",
+        id: "melons",
+        icon: Melons
     },
 
     {
-        categoryName: "Noodles",
-        id: "noodles",
-        icon: Noodles
+        categoryName: "Tropical",
+        id: "tropical",
+        icon: Tropical
     },
 
     {
-        categoryName: "Chole Bhature",
-        id: "chole-bhature",
-        icon: CholeBhature
+        categoryName: "Stonefruits",
+        id: "stone_fruits",
+        icon: Stonefruits
     }
 ]
