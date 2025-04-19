@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { 
-  Leaf, 
+  Apple, 
   ShoppingBag, 
   Clock, 
   Truck, 
@@ -72,19 +72,19 @@ function MyOrders() {
         return { 
           color: 'bg-amber-100 text-amber-800 border-amber-300',
           icon: <Clock className="h-4 w-4 mr-1.5" />,
-          message: 'We\'re preparing your fresh food!'
+          message: 'We\'re preparing your fresh fruits!'
         };
       case 'Shipped':
         return { 
           color: 'bg-blue-100 text-blue-800 border-blue-300',
           icon: <Truck className="h-4 w-4 mr-1.5" />,
-          message: 'Your food is on the way!'
+          message: 'Your fruits are on the way!'
         };
       case 'Delivered':
         return { 
           color: 'bg-green-100 text-green-800 border-green-300',
           icon: <CheckCircle className="h-4 w-4 mr-1.5" />,
-          message: 'Enjoy your meal!'
+          message: 'Enjoy your delicious fruits!'
         };
       case 'Cancelled':
         return { 
@@ -112,7 +112,7 @@ function MyOrders() {
     return (
       <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-b from-green-50 to-white">
         <div className="rounded-full bg-green-100 p-3 mb-4">
-          <Leaf className="h-10 w-10 text-green-500 animate-pulse" />
+          <Apple className="h-10 w-10 text-green-500 animate-pulse" />
         </div>
         <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-b-4 border-green-500 mb-4"></div>
         <p className="mt-2 text-gray-700 font-medium">Loading your orders...</p>
@@ -151,12 +151,12 @@ function MyOrders() {
             <ShoppingBag size={32} className="text-green-500" />
           </div>
           <h2 className="text-2xl font-bold mb-2 text-gray-800">Your order history is empty</h2>
-          <p className="text-gray-600 mb-8">You haven't placed any food orders yet. Browse our fresh selection and place your first order!</p>
+          <p className="text-gray-600 mb-8">You haven't placed any fruit orders yet. Browse our fresh selection and place your first order!</p>
           <button 
             onClick={() => navigate('/')} 
             className="w-full py-3 bg-gradient-to-r from-green-500 to-lime-500 text-white rounded-lg font-medium hover:from-green-600 hover:to-lime-600 transition shadow-sm flex items-center justify-center"
           >
-            Explore Our Menu
+            Explore Our Fruits
             <ArrowRight size={18} className="ml-2" />
           </button>
         </div>
@@ -249,7 +249,7 @@ function MyOrders() {
                               alt={item.name} 
                               className="w-full h-full object-cover"
                               onError={(e) => {
-                                e.target.src = '/food-placeholder.png';
+                                e.target.src = '/fruit-placeholder.png';
                                 e.target.onerror = null;
                               }}
                             />

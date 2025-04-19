@@ -65,8 +65,8 @@ export default function NavBar() {
                 <Leaf size={18} className="absolute -bottom-1 -right-1 text-lime-500" />
               </div>
               <div className="ml-2">
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-green-500 to-lime-500 bg-clip-text text-transparent">FreshFood</h1>
-                <div className="text-xs text-gray-500 -mt-1">Nature's goodness delivered!</div>
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-green-500 to-lime-500 bg-clip-text text-transparent">FreshFruit</h1>
+                <div className="text-xs text-gray-500 -mt-1">Farm-fresh fruits delivered!</div>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function NavBar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/explore">Explore</NavLink>
+            <NavLink to="/explore">Seasonal Fruits</NavLink>
             <NavLink to="/contact">Contact Us</NavLink>
 
             {!token ? (
@@ -163,7 +163,7 @@ export default function NavBar() {
         <div className="md:hidden bg-white border-t border-green-100">
           <div className="px-4 pt-2 pb-3 space-y-1">
             <MobileNavLink to="/" onClick={() => setIsMenuOpen(false)}>Home</MobileNavLink>
-            <MobileNavLink to="/explore" onClick={() => setIsMenuOpen(false)}>Explore</MobileNavLink>
+            <MobileNavLink to="/explore" onClick={() => setIsMenuOpen(false)}>Seasonal Fruits</MobileNavLink>
             <MobileNavLink to="/contact" onClick={() => setIsMenuOpen(false)}>Contact Us</MobileNavLink>
             
             {!token ? (

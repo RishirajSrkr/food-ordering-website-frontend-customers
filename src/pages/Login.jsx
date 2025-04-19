@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link, useLocation } from 'react-router';
-import { Eye, EyeOff, Mail, Lock, ArrowRight, Leaf, Apple, ShoppingBag } from 'lucide-react';
+import { Eye, EyeOff, Mail, Lock, ArrowRight, Apple } from 'lucide-react';
 import { useStoreContext } from '../context/StoreContext';
 import { loginUser, setTokenInLocalStorage } from '../service/authService';
 
@@ -97,27 +97,19 @@ function Login() {
               <div className="h-20 w-20 rounded-full bg-white flex items-center justify-center shadow-lg">
                 <div className="relative">
                   <Apple className="h-10 w-10 text-green-500" />
-                  <Leaf className="h-6 w-6 text-lime-500 absolute -bottom-1 -right-1" />
+                  <svg className="h-6 w-6 text-lime-500 absolute -bottom-1 -right-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17.9999L12 14.9999L17 17.9999L16.1953 12.2059L20.5 8.41188L14.6978 7.81416L12 2.3999L9.30219 7.81416L3.5 8.41188L7.80469 12.2059L7 17.9999Z" fill="currentColor"/>
+                  </svg>
                 </div>
               </div>
             </div>
 
             {/* Branding content */}
-            <h1 className="text-4xl font-bold text-center mb-4">FreshFood</h1>
-            <p className="text-xl text-center mb-12">Nature's goodness delivered to your doorstep</p>
+            <h1 className="text-4xl font-bold text-center mb-4">FreshFruit</h1>
+            <p className="text-xl text-center mb-12">Nature's ripest fruits delivered to your doorstep</p>
 
             {/* Benefits */}
             <div className="space-y-8">
-              <div className="flex items-center">
-                <div className="flex-shrink-0 h-12 w-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
-                  <ShoppingBag className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-medium">Fresh Delivery</h3>
-                  <p className="text-green-50">Fresh food at your doorstep in minutes</p>
-                </div>
-              </div>
-
               <div className="flex items-center">
                 <div className="flex-shrink-0 h-12 w-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
                   <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -125,18 +117,30 @@ function Login() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium">Seasonal Specials</h3>
-                  <p className="text-green-50">Special deals on seasonal produce</p>
+                  <h3 className="text-xl font-medium">Seasonal Selection</h3>
+                  <p className="text-green-50">Special offers on season's freshest fruits</p>
                 </div>
               </div>
 
               <div className="flex items-center">
                 <div className="flex-shrink-0 h-12 w-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
-                  <Leaf className="h-6 w-6 text-white" />
+                  <Apple className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-medium">Farm to Doorstep</h3>
+                  <p className="text-green-50">Freshly harvested fruits in quick time</p>
+                </div>
+              </div>
+
+              <div className="flex items-center">
+                <div className="flex-shrink-0 h-12 w-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
+                  <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
                 </div>
                 <div>
                   <h3 className="text-xl font-medium">Organic Options</h3>
-                  <p className="text-green-50">Wide range of organic and natural foods</p>
+                  <p className="text-green-50">Wide range of organic and pesticide-free fruits</p>
                 </div>
               </div>
             </div>
@@ -151,7 +155,9 @@ function Login() {
               <div className="flex justify-center mb-4">
                 <div className="relative h-16 w-16 rounded-full bg-gradient-to-r from-green-500 to-lime-500 flex items-center justify-center shadow-md">
                   <Apple className="h-8 w-8 text-white" />
-                  <Leaf className="h-4 w-4 text-white absolute -bottom-0.5 -right-0.5" />
+                  <svg className="h-4 w-4 text-white absolute -bottom-0.5 -right-0.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 17.9999L12 14.9999L17 17.9999L16.1953 12.2059L20.5 8.41188L14.6978 7.81416L12 2.3999L9.30219 7.81416L3.5 8.41188L7.80469 12.2059L7 17.9999Z" fill="currentColor"/>
+                  </svg>
                 </div>
               </div>
               <h2 className="text-2xl font-bold text-gray-800">Welcome Back</h2>

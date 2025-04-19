@@ -6,7 +6,7 @@ import {
   Send, 
   Clock, 
   Truck, 
-  Leaf, 
+  Apple, 
   HelpCircle,
   MessageSquare,
   Check,
@@ -72,11 +72,11 @@ function ContactPage() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <div className="inline-block bg-green-100 p-3 rounded-full mb-4">
-            <Leaf className="h-8 w-8 text-green-600" />
+            <Apple className="h-8 w-8 text-green-600" />
           </div>
           <h1 className="text-4xl font-bold text-green-600 mb-4">Get in Touch</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Have questions about our fresh food, delivery services, or want to share your experience? 
+            Have questions about our fresh fruits, delivery services, or want to share your experience? 
             We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.
           </p>
         </div>
@@ -97,7 +97,7 @@ function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Address</h4>
-                    <p className="text-green-50">123 Fresh Street, Green City, GC 12345</p>
+                    <p className="text-green-50">123 Orchard Lane, Fruit Valley, FV 12345</p>
                   </div>
                 </div>
                 
@@ -107,7 +107,7 @@ function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Email</h4>
-                    <p className="text-green-50">hello@freshfood.com</p>
+                    <p className="text-green-50">hello@freshfruit.com</p>
                   </div>
                 </div>
                 
@@ -127,7 +127,7 @@ function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Business Hours</h4>
-                    <p className="text-green-50">Mon-Sun: 10:00 AM - 10:00 PM</p>
+                    <p className="text-green-50">Mon-Sun: 8:00 AM - 8:00 PM</p>
                   </div>
                 </div>
               </div>
@@ -269,7 +269,7 @@ function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-gray-800 mb-2">What are your delivery hours?</h3>
-                  <p className="text-gray-600">We deliver from 10:00 AM to 10:00 PM, seven days a week, ensuring you can enjoy fresh food whenever you want.</p>
+                  <p className="text-gray-600">We deliver from 8:00 AM to 8:00 PM, seven days a week, ensuring you can enjoy fresh fruits whenever you want.</p>
                 </div>
               </div>
             </div>
@@ -289,11 +289,11 @@ function ContactPage() {
             <div className="bg-white p-6 rounded-xl shadow-sm border border-green-100 hover:border-green-200 transition-colors">
               <div className="flex items-start">
                 <div className="bg-green-100 p-2 rounded-full mr-4 flex-shrink-0">
-                  <Leaf className="h-5 w-5 text-green-600" />
+                  <Apple className="h-5 w-5 text-green-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-800 mb-2">Do you offer vegetarian options?</h3>
-                  <p className="text-gray-600">Yes! We have a wide range of vegetarian and vegan options available, all made with fresh, locally-sourced ingredients.</p>
+                  <h3 className="text-lg font-bold text-gray-800 mb-2">Do you offer organic options?</h3>
+                  <p className="text-gray-600">Yes! We have a wide range of organic and locally-grown fruits available, all harvested at peak ripeness for maximum flavor and nutrition.</p>
                 </div>
               </div>
             </div>
@@ -305,7 +305,7 @@ function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-gray-800 mb-2">How can I track my order?</h3>
-                  <p className="text-gray-600">Once your order is confirmed, you'll receive a tracking link via email and SMS to follow your food's journey to your doorstep.</p>
+                  <p className="text-gray-600">Once your order is confirmed, you'll receive a tracking link via email and SMS to follow your fruit delivery journey to your doorstep.</p>
                 </div>
               </div>
             </div>

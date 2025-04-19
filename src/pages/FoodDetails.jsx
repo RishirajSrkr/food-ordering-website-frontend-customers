@@ -8,7 +8,7 @@ import {
   Minus, 
   Heart, 
   ChevronsUp, 
-  Leaf,
+  Apple,
   Clock,
   Tag,
   Loader,
@@ -89,14 +89,14 @@ function FoodDetails() {
         <div className="bg-red-100 rounded-full p-4 mb-4">
           <ChevronsUp className="h-10 w-10 text-red-500" />
         </div>
-        <h2 className="text-2xl font-bold mb-2 text-center">Food item not found</h2>
-        <p className="text-gray-600 mb-6 text-center">The item you're looking for might have been removed or is temporarily unavailable.</p>
+        <h2 className="text-2xl font-bold mb-2 text-center">Fruit not found</h2>
+        <p className="text-gray-600 mb-6 text-center">The fruit you're looking for might be out of season or is temporarily unavailable.</p>
         <button 
           onClick={goBack}
           className="bg-gradient-to-r from-green-500 to-lime-500 hover:from-green-600 hover:to-lime-600 text-white px-6 py-3 rounded-lg transition-colors shadow-sm flex items-center"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
-          Go Back to Menu
+          Browse Other Fruits
         </button>
       </div>
     );
@@ -111,7 +111,7 @@ function FoodDetails() {
           className="flex items-center text-gray-600 hover:text-green-600 mb-6 transition-colors"
         >
           <ArrowLeft className="h-5 w-5 mr-2" />
-          <span className="font-medium">Back to Menu</span>
+          <span className="font-medium">Back to Selection</span>
         </button>
 
         {/* Main content */}
@@ -123,7 +123,7 @@ function FoodDetails() {
               alt={food.name} 
               className="w-full h-full object-cover"
               onError={(e) => {
-                e.target.src = '/food-placeholder.png';
+                e.target.src = '/fruit-placeholder.png';
                 e.target.onerror = null;
               }}
             />
@@ -155,8 +155,8 @@ function FoodDetails() {
                 <span>30-45 min delivery</span>
               </div>
               <div className="flex items-center">
-                <Leaf className="h-4 w-4 mr-1 text-green-500" />
-                <span>Fresh ingredients</span>
+                <Apple className="h-4 w-4 mr-1 text-green-500" />
+                <span>Farm-fresh produce</span>
               </div>
             </div>
 
@@ -164,19 +164,19 @@ function FoodDetails() {
               {food.description}
             </p>
 
-            {food.ingredients && (
+            {food.nutrition && (
               <div className="mb-8">
                 <h3 className="font-medium text-gray-800 mb-3 flex items-center">
                   <Tag className="h-4 w-4 mr-2 text-green-500" />
-                  Ingredients
+                  Nutrition Facts
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {food.ingredients.map((ingredient, index) => (
+                  {food.nutrition.map((item, index) => (
                     <span 
                       key={index} 
                       className="bg-green-50 text-green-700 text-xs px-3 py-1.5 rounded-full"
                     >
-                      {ingredient}
+                      {item}
                     </span>
                   ))}
                 </div>
@@ -211,16 +211,16 @@ function FoodDetails() {
                 </div>
 
                 <div className="text-sm text-gray-500 flex items-center">
-                  {food.category === "Vegetarian" && (
+                  {food.isOrganic && (
                     <div className="flex items-center mr-3">
                       <div className="h-3 w-3 rounded-full bg-green-500 mr-1"></div>
-                      <span>Vegetarian</span>
+                      <span>Organic</span>
                     </div>
                   )}
-                  {food.isSpicy && (
+                  {food.isSeasonalPick && (
                     <div className="flex items-center">
-                      <div className="h-3 w-3 rounded-full bg-red-500 mr-1"></div>
-                      <span>Spicy</span>
+                      <div className="h-3 w-3 rounded-full bg-lime-500 mr-1"></div>
+                      <span>Seasonal Pick</span>
                     </div>
                   )}
                 </div>
@@ -233,13 +233,13 @@ function FoodDetails() {
               className="w-full bg-gradient-to-r from-green-500 to-lime-500 hover:from-green-600 hover:to-lime-600 text-white font-medium py-3.5 px-4 rounded-lg transition-colors shadow-sm flex items-center justify-center gap-2"
             >
               <ShoppingBag className="h-5 w-5" />
-              {quantities[foodId] > 0 ? 'View in Cart' : 'Add to Cart'}
+              {quantities[foodId] > 0 ? 'View in Basket' : 'Add to Basket'}
             </button>
             
             {quantities[foodId] > 0 && (
               <div className="mt-3 bg-green-50 rounded-lg p-3 flex items-center justify-center text-sm text-green-700">
                 <Check className="h-4 w-4 mr-2" />
-                {quantities[foodId]} item{quantities[foodId] > 1 ? 's' : ''} already in your cart
+                {quantities[foodId]} {quantities[foodId] > 1 ? 'items' : 'item'} already in your fruit basket
               </div>
             )}
           </div>
@@ -249,7 +249,7 @@ function FoodDetails() {
         {relatedItems.length > 0 && (
           <div className="mt-12">
             <h2 className="text-xl font-bold mb-6 text-gray-800 flex items-center">
-              <Leaf className="h-5 w-5 mr-2 text-green-500" />
+              <Apple className="h-5 w-5 mr-2 text-green-500" />
               You might also like
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -265,7 +265,7 @@ function FoodDetails() {
                       alt={item.name} 
                       className="w-full h-full object-cover"
                       onError={(e) => {
-                        e.target.src = '/food-placeholder.png';
+                        e.target.src = '/fruit-placeholder.png';
                         e.target.onerror = null;
                       }}
                     />

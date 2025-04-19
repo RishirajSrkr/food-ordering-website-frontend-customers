@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { categories as foodCategories } from '../assets/assets'
+import { categories as fruitCategories } from '../assets/assets'
 import { useNavigate } from 'react-router'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
 import { Navigation } from 'swiper/modules'
-import { Leaf } from 'lucide-react'
+import { Apple } from 'lucide-react'
 
 function ExploreMenu({category, setCategory}) {
   const [categories, setCategories] = useState([])
@@ -16,7 +16,7 @@ function ExploreMenu({category, setCategory}) {
   let navigate = useNavigate();
 
   useEffect(() => {
-    setCategories(foodCategories)
+    setCategories(fruitCategories)
   }, [])
 
   function handleCategoryClick(categoryName) {
@@ -36,8 +36,8 @@ function ExploreMenu({category, setCategory}) {
         <div className="border-b border-green-200 pb-6">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center">
-              <Leaf className="h-6 w-6 text-green-500 mr-2" />
-              <h3 className="font-bold text-2xl text-gray-800">Fresh picks for you</h3>
+              <Apple className="h-6 w-6 text-green-500 mr-2" />
+              <h3 className="font-bold text-2xl text-gray-800">Seasonal Fruit Selection</h3>
             </div>
             <div className="flex gap-3">
               <button 

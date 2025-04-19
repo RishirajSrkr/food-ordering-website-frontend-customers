@@ -8,7 +8,7 @@ import {
   ArrowRight, 
   CreditCard, 
   MapPin, 
-  Leaf, 
+  Apple, 
   Shield, 
   User, 
   Mail, 
@@ -146,8 +146,8 @@ function PlaceOrder() {
             key: import.meta.env.VITE_RAZORPAY_KEY,
             amount: order.amount * 100,
             currency: "INR",
-            name: "FreshFood",
-            description: "Fresh Food Order Payment",
+            name: "FreshFruit",
+            description: "Fresh Fruit Order Payment",
             prefill: {
                 name: formData.name,
                 email: formData.email,
@@ -251,7 +251,7 @@ function PlaceOrder() {
                     {/* Form Column */}
                     <div className="w-full lg:w-3/5">
                         <h1 className="text-2xl font-bold mb-6 text-gray-800 flex items-center">
-                            <Leaf className="mr-2 text-green-500" size={24} />
+                            <Apple className="mr-2 text-green-500" size={24} />
                             Complete Your Order
                         </h1>
 
@@ -264,7 +264,7 @@ function PlaceOrder() {
                                 <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white shadow-sm">
                                     <ShoppingBag size={16} />
                                 </div>
-                                <span className="mt-2 text-sm">Cart</span>
+                                <span className="mt-2 text-sm">Fruit Basket</span>
                             </div>
                             <div className="flex flex-col items-center relative z-10">
                                 <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white shadow-sm">
@@ -415,7 +415,7 @@ function PlaceOrder() {
                             <div className="mb-6">
                                 <label className="block text-sm font-medium mb-1.5 text-gray-700" htmlFor="specialInstructions">
                                     <div className="flex items-center">
-                                        <Leaf size={16} className="mr-1.5 text-green-500" />
+                                        <Apple size={16} className="mr-1.5 text-green-500" />
                                         Special Instructions (Optional)
                                     </div>
                                 </label>
@@ -425,7 +425,7 @@ function PlaceOrder() {
                                     value={formData.specialInstructions}
                                     onChange={handleChange}
                                     className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-200 focus:border-green-500 transition-all"
-                                    placeholder="Add any special delivery instructions, allergies, or preferences."
+                                    placeholder="Add any special delivery instructions, allergies, or preferences for fruit ripeness."
                                     rows="2"
                                 ></textarea>
                             </div>
@@ -471,7 +471,7 @@ function PlaceOrder() {
                                         />
                                         <label htmlFor="cod" className="ml-2 flex-grow cursor-pointer">
                                             Cash On Delivery
-                                            <p className="text-xs text-gray-500 mt-1">Pay when your order arrives</p>
+                                            <p className="text-xs text-gray-500 mt-1">Pay when your fruits arrive</p>
                                         </label>
                                     </div>
                                 </div>
@@ -523,7 +523,7 @@ function PlaceOrder() {
                                                 alt={item.name} 
                                                 className="h-full w-full object-cover"
                                                 onError={(e) => {
-                                                    e.target.src = '/food-placeholder.png';
+                                                    e.target.src = '/fruit-placeholder.png';
                                                     e.target.onerror = null;
                                                 }}
                                             />

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router';
-import { Eye, EyeOff, User, Mail, Lock, MapPin, Phone, ArrowRight, Leaf, Apple, ShieldCheck } from 'lucide-react';
+import { Eye, EyeOff, User, Mail, Lock, MapPin, Phone, ArrowRight, Apple, ShieldCheck } from 'lucide-react';
 import { registerUser } from '../service/authService';
 
 function Register() {
@@ -118,12 +118,14 @@ function Register() {
             <div className='flex items-center justify-center gap-4'>
               <div className="relative">
                 <Apple size={32} className="text-white" />
-                <Leaf size={18} className="absolute -bottom-1 -right-1 text-lime-300" />
+                <svg className="h-6 w-6 text-white absolute -bottom-1 -right-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 17.9999L12 14.9999L17 17.9999L16.1953 12.2059L20.5 8.41188L14.6978 7.81416L12 2.3999L9.30219 7.81416L3.5 8.41188L7.80469 12.2059L7 17.9999Z" fill="currentColor"/>
+                </svg>
               </div>
               {/* Branding content */}
-              <h1 className="text-4xl font-bold text-center mb-4">FreshFood</h1>
+              <h1 className="text-4xl font-bold text-center mb-4">FreshFruit</h1>
             </div>
-            <p className="text-xl text-center mb-12">Nature's goodness delivered to your doorstep</p>
+            <p className="text-xl text-center mb-12">Nature's ripest fruits delivered to your doorstep</p>
 
             {/* Benefits */}
             <div className="space-y-8">
@@ -134,18 +136,18 @@ function Register() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium">Fresh Delivery</h3>
-                  <p className="text-green-50">Fresh food at your doorstep in minutes</p>
+                  <h3 className="text-xl font-medium">Same-Day Delivery</h3>
+                  <p className="text-green-50">Fresh fruits at your doorstep in under an hour</p>
                 </div>
               </div>
 
               <div className="flex items-center">
                 <div className="flex-shrink-0 h-12 w-12 rounded-full bg-white/20 flex items-center justify-center mr-4">
-                  <Leaf className="h-6 w-6 text-white" />
+                  <Apple className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium">Organic Options</h3>
-                  <p className="text-green-50">Wide range of organic and natural foods</p>
+                  <h3 className="text-xl font-medium">Seasonal Selection</h3>
+                  <p className="text-green-50">Wide range of locally-sourced seasonal fruits</p>
                 </div>
               </div>
 
@@ -155,7 +157,7 @@ function Register() {
                 </div>
                 <div>
                   <h3 className="text-xl font-medium">Quality Guaranteed</h3>
-                  <p className="text-green-50">Only the freshest ingredients for your meals</p>
+                  <p className="text-green-50">Only the freshest, ripest fruits for your enjoyment</p>
                 </div>
               </div>
             </div>
@@ -171,17 +173,19 @@ function Register() {
                 <div className="relative">
                   <div className="h-16 w-16 rounded-full bg-gradient-to-r from-green-500 to-lime-500 flex items-center justify-center shadow-md">
                     <Apple className="h-8 w-8 text-white" />
-                    <Leaf className="h-4 w-4 text-white absolute -bottom-0.5 -right-0.5" />
+                    <svg className="h-4 w-4 text-white absolute -bottom-0.5 -right-0.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7 17.9999L12 14.9999L17 17.9999L16.1953 12.2059L20.5 8.41188L14.6978 7.81416L12 2.3999L9.30219 7.81416L3.5 8.41188L7.80469 12.2059L7 17.9999Z" fill="currentColor"/>
+                    </svg>
                   </div>
                 </div>
               </div>
               <h2 className="text-2xl font-bold text-gray-800">Create Your Account</h2>
-              <p className="mt-2 text-gray-600">Sign up to start ordering fresh food</p>
+              <p className="mt-2 text-gray-600">Sign up to start ordering fresh fruits</p>
             </div>
 
             <div className="hidden lg:block mb-8">
               <h2 className="text-3xl font-bold text-gray-800">Create Your Account</h2>
-              <p className="mt-2 text-gray-600">Sign up to start ordering fresh food</p>
+              <p className="mt-2 text-gray-600">Sign up to start ordering fresh fruits</p>
             </div>
 
             {/* Registration Form */}
@@ -382,16 +386,16 @@ function Register() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-center text-sm font-medium text-gray-900">Fresh Delivery</h3>
-                <p className="text-center text-xs text-gray-500 mt-1">Fresh food at your doorstep</p>
+                <h3 className="text-center text-sm font-medium text-gray-900">Fast Delivery</h3>
+                <p className="text-center text-xs text-gray-500 mt-1">Fresh fruits at your doorstep</p>
               </div>
 
               <div className="bg-white p-4 rounded-lg shadow-sm border border-green-100">
                 <div className="flex items-center justify-center h-10 w-10 rounded-full bg-green-100 mx-auto mb-3">
-                  <Leaf className="h-6 w-6 text-green-500" />
+                  <Apple className="h-6 w-6 text-green-500" />
                 </div>
-                <h3 className="text-center text-sm font-medium text-gray-900">Organic Options</h3>
-                <p className="text-center text-xs text-gray-500 mt-1">Healthy and natural foods</p>
+                <h3 className="text-center text-sm font-medium text-gray-900">Seasonal Selection</h3>
+                <p className="text-center text-xs text-gray-500 mt-1">Locally-sourced ripe fruits</p>
               </div>
             </div>
           </div>

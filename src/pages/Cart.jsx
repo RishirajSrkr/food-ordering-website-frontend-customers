@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStoreContext } from '../context/StoreContext'
-import { Trash2, Plus, Minus, ShoppingBag, ArrowLeft, Leaf, Truck } from 'lucide-react'
+import { Trash2, Plus, Minus, ShoppingBag, ArrowLeft, Apple, Truck } from 'lucide-react'
 import { useNavigate } from 'react-router';
 import { calculateCartTotals } from '../util/CartUtils';
 
@@ -30,7 +30,7 @@ function Cart() {
                     
                     <h2 className="text-2xl font-bold text-gray-800 flex items-center">
                         <ShoppingBag size={24} className="text-green-500 mr-2" />
-                        Your Cart
+                        Your Fruit Basket
                     </h2>
                 </div>
 
@@ -39,13 +39,13 @@ function Cart() {
                         <div className="w-24 h-24 bg-green-50 rounded-full mx-auto flex items-center justify-center mb-6">
                             <ShoppingBag size={40} className="text-green-300" />
                         </div>
-                        <h3 className="text-xl font-medium text-gray-700 mb-3">Your cart is empty</h3>
-                        <p className="text-gray-500 mb-8 max-w-md mx-auto">Looks like you haven't added any items to your cart yet. Start exploring our delicious options!</p>
+                        <h3 className="text-xl font-medium text-gray-700 mb-3">Your fruit basket is empty</h3>
+                        <p className="text-gray-500 mb-8 max-w-md mx-auto">Looks like you haven't added any fruits to your basket yet. Start exploring our juicy, farm-fresh options!</p>
                         <button 
                             onClick={() => navigate('/')}
                             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-lime-500 text-white font-medium rounded-lg hover:from-green-600 hover:to-lime-600 transition-colors shadow-sm"
                         >
-                            Explore Menu
+                            Browse Fruit Selection
                         </button>
                     </div>
                 ) : (
@@ -55,8 +55,8 @@ function Cart() {
                             <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-green-100">
                                 <div className="p-4 border-b border-green-100 bg-green-50">
                                     <h3 className="font-medium text-gray-800 flex items-center">
-                                        <Leaf size={16} className="text-green-500 mr-2" />
-                                        Items in Your Cart ({cartItems.length})
+                                        <Apple size={16} className="text-green-500 mr-2" />
+                                        Fruits in Your Basket ({cartItems.length})
                                     </h3>
                                 </div>
 
@@ -70,7 +70,7 @@ function Cart() {
                                                         alt={item.name} 
                                                         className="h-full w-full object-cover"
                                                         onError={(e) => {
-                                                            e.target.src = '/food-placeholder.png';
+                                                            e.target.src = '/fruit-placeholder.png';
                                                             e.target.onerror = null;
                                                         }}
                                                     />

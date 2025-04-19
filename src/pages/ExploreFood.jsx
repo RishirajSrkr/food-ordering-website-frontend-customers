@@ -25,7 +25,7 @@ function ExploreFood() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
               <input 
                 type="text" 
-                placeholder="Search for delicious food..."
+                placeholder="Search for fresh fruits..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-10 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent shadow-sm"
@@ -49,14 +49,14 @@ function ExploreFood() {
                 className="w-full appearance-none pl-10 pr-10 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent shadow-sm bg-white"
               >
                 <option value="ALL">All Categories</option>
-                <option value="Biryani">Biryani</option>
-                <option value="Burger">Burger</option>
-                <option value="Cakes">Cakes</option>
-                <option value="Pizza">Pizza</option>
-                <option value="NorthIndianThali">North Indian Thali</option>
-                <option value="Noodles">Noodles</option>
-                <option value="Paratha">Paratha</option>
-                <option value="CholeBhature">Chole Bhature</option>
+                <option value="Citrus">Citrus</option>
+                <option value="Berries">Berries</option>
+                <option value="Tropical">Tropical</option>
+                <option value="Stone Fruits">Stone Fruits</option>
+                <option value="Melons">Melons</option>
+                <option value="Apples">Apples</option>
+                <option value="Grapes">Grapes</option>
+                <option value="Exotic">Exotic</option>
               </select>
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
                 <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
