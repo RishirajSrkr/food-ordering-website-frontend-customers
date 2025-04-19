@@ -1,4 +1,4 @@
-import Apples from './apples.png';
+import Apples from './Apples.png';
 import Berries from './Berries.png';
 import Citrus from './Citrus.png';
 import Grapes from './Grapes.png';
