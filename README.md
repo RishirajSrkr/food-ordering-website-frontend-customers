@@ -1,12 +1,23 @@
-# React + Vite
+FreshFruit - Front-End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React-based e-commerce platform for ordering fresh fruits online with a modern, user-friendly interface.
+Overview
+FreshFruit is a fully-featured online fruit delivery platform built with React.js and styled with Tailwind CSS. This repository contains the front-end code that provides users with an intuitive shopping experience, from browsing seasonal fruit selections to checking out with ease.
+Show Image
+Features
 
-Currently, two official plugins are available:
+Intuitive Product Browsing: Category-based navigation with seasonal fruit highlights
+Detailed Product Pages: Comprehensive information about each fruit including nutritional details
+Shopping Cart: Real-time cart management with quantity adjustments
+User Authentication: Secure login and registration system
+Order Management: Track orders and view order history
+Responsive Design: Mobile-first approach that works seamlessly across all devices
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tech Stack
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+React.js: Core front-end library
+Tailwind CSS: Utility-first CSS framework for styling
+React Router: For navigation between pages
+Context API: For state management
+Lucide React: For UI icons
+Axios: For API requests to the backend
