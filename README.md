@@ -1,4 +1,4 @@
-**🍎 FreshFruit - Full Stack Project 🍓**
+**🍎 FreshFruit - Full Stack Project 🍓** (https://freshfruits.rishirajsarkar.in/)
 
 A responsive React-based e-commerce platform for ordering fresh fruits online with a modern, user-friendly interface.
 
