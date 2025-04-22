@@ -1,9 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { Link, useLocation } from 'react-router'
 import { useStoreContext } from '../context/StoreContext'
 import { Heart, Info, ShoppingBag, Plus, Minus } from 'lucide-react'
 
 function FoodItem({ food }) {
+
+  const location = useLocation();
+
+  const isExplorePage = location.pathname.startsWith("/explore");
+  const linkPath = isExplorePage ? `food/${food.id}` : `food/${food.id}`;
+
+
+
   const { quantities, incrementQty, decrementQty } = useStoreContext();
 
   function handleIncrement() {
@@ -49,7 +57,7 @@ function FoodItem({ food }) {
 
         <div className="flex items-center gap-2">
           <Link
-            to={`food/${food.id}`}
+            to={linkPath}
             className="flex-grow bg-white border border-green-300 hover:border-green-500 text-green-700 font-medium py-2 px-3 rounded-lg flex items-center justify-center gap-2 transition-colors duration-300"
           >
             <Info className="w-4 h-4" />

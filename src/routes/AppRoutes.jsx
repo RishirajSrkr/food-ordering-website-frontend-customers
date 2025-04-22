@@ -29,6 +29,7 @@ function AppRoutes() {
       </Route>
 
       <Route path='/food/:foodId' element={<FoodDetails />} />
+      <Route path='/explore/food/:foodId' element={<FoodDetails />} />
       <Route path='/category/:categoryName' element={<AllFoodsOfCategory />} />
     </Routes>
   )
